@@ -1,3 +1,10 @@
+## The first function, makeCacheMatrix creates a special "Matrix", which is really a list containing a function to
+
+## set the value of the Matrix
+## get the value of the Matrix
+## set the value of the inverse
+## get the value of the inverse
+
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
   set <- function(y) {
@@ -11,7 +18,7 @@ makeCacheMatrix <- function(x = matrix()) {
        setinv = setinv,
        getinv = getinv)
 }
-
+# Computes inverse of a matrix stored in makeCacheMatrix.
 cacheSolve <- function(x, ...) {
   inv <- x$getinv()
   if(!is.null(inv)) {
